@@ -73,6 +73,20 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         .quiz-opt:hover { border-color:#7c3aed; background:#f5f3ff; }
         .quiz-opt:active { transform:scale(0.99); background:#ede9fe; }
         .quiz-opt:focus-visible { outline:3px solid #7c3aed; outline-offset:2px; }
+        /* クイズ中に非表示にするコンテンツ */
+        .side-content.quiz-hidden { display:none !important; }
+        /* スコアゲージ */
+        .score-gauge-wrap { margin:12px 0 16px; }
+        .score-gauge-track { height:14px; background:#e5e7eb; border-radius:7px; overflow:hidden; }
+        .score-gauge-fill { height:100%; border-radius:7px; width:0; transition:width 1s ease; }
+        .score-gauge-label { display:flex; justify-content:space-between; font-size:11px; color:#9ca3af; margin-top:4px; }
+        /* エクササイズステップカード */
+        .step-cards { display:flex; flex-direction:column; gap:8px; margin-top:10px; }
+        .step-card { display:flex; gap:10px; align-items:flex-start; background:#f8f7ff; border-radius:10px; padding:10px 12px; font-size:13px; line-height:1.7; }
+        .step-num { background:#7c3aed; color:white; border-radius:50%; width:22px; height:22px; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; flex-shrink:0; margin-top:1px; }
+        /* 戻るボタン */
+        .btn-back { background:none; border:1.5px solid #d1d5db; color:#6b7280; padding:10px 16px; border-radius:8px; font-size:14px; cursor:pointer; min-height:44px; margin-bottom:10px; width:auto; transition:border-color .15s; }
+        .btn-back:hover { border-color:#7c3aed; color:#7c3aed; }
 
     
 @media print{
@@ -94,7 +108,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
     <header class="site-header" role="banner">
         <div class="emoji" aria-hidden="true">🧍</div>
         <h1>姿勢チェッカー</h1>
-        <p>猫背・巻き肩・骨盤の歪みをセルフチェックして改善アドバイスを取得...</p>
+        <p>猫背・巻き肩・骨盤の歪みをセルフチェックして改善アドバイスを取得</p>
     </header>
 
     <main id="main-content" class="container" role="main" aria-label="姿勢チェッカーのメインコンテンツ">
@@ -107,25 +121,37 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
           <ul style="font-size:13px;color:#94a3b8;margin:0 0 16px 16px;"><li>所要時間：約1分</li><li>登録不要・無料</li></ul>
           <button class="btn" onclick="startQuiz()">チェックスタート →</button>
         </div>
-        <div id="quiz-area" style="display:none;">
-          <div style="font-size:12px;color:#999;margin-bottom:4px;">質問 <span id="q-num">1</span> / 6</div>
-          <div style="height:4px;background:#e5e7eb;border-radius:2px;margin-bottom:16px;">
-            <div id="q-bar" style="height:100%;background:#7C3AED;border-radius:2px;transition:width .3s;width:16.7%;"></div>
+        <div id="quiz-area" class="card" style="display:none;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+            <button class="btn-back" id="btn-back" onclick="back()" style="display:none;" aria-label="前の質問に戻る">← 戻る</button>
+            <div style="font-size:12px;color:#999;margin-left:auto;">質問 <span id="q-num">1</span> / 6</div>
+          </div>
+          <div style="height:10px;background:#e5e7eb;border-radius:5px;margin-bottom:16px;">
+            <div id="q-bar" style="height:100%;background:#7C3AED;border-radius:5px;transition:width .3s;width:16.7%;"></div>
           </div>
           <p id="q-text" style="font-size:16px;font-weight:600;margin-bottom:16px;"></p>
           <div id="q-options"></div>
         </div>
         <div class="result" id="result">
           <div class="card">
-            <h3 id="r-title" style="font-size:18px;font-weight:700;color:#7C3AED;margin-bottom:8px;"></h3>
+            <h3 id="r-title" style="font-size:20px;font-weight:700;margin-bottom:8px;"></h3>
             <div id="r-problems" style="margin-bottom:12px;"></div>
-            <div style="background:#F5F3FF;border-radius:10px;padding:14px;font-size:13px;line-height:1.9;" id="r-advice"></div>
-            <button class="btn" style="margin-top:16px;" onclick="location.reload()">もう一度チェック</button>
+            <!-- スコアゲージ -->
+            <div class="score-gauge-wrap">
+              <div style="font-size:12px;color:#6b7280;margin-bottom:4px;">姿勢スコア: <strong id="r-score-text"></strong></div>
+              <div class="score-gauge-track"><div class="score-gauge-fill" id="r-gauge"></div></div>
+              <div class="score-gauge-label"><span>良好</span><span>要改善</span></div>
+            </div>
+            <!-- アドバイスステップ -->
+            <div id="r-advice"></div>
+            <!-- 結果シェアボタン -->
+            <div id="r-share" style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap;"></div>
+            <button class="btn" style="margin-top:16px;" onclick="resetQuiz()">もう一度チェック</button>
           </div>
         </div>
 
         <!-- 関連サービス -->
-        <div class="card" style="margin-top:8px;">
+        <div class="card side-content" style="margin-top:8px;">
             <h3 style="font-size:13px;font-weight:600;color:#888;margin-bottom:10px;">🔗 関連サービス</h3>
             <div style="display:flex;flex-direction:column;gap:6px;">
                 <a href="https://appadaycreator.com/sleep-quality-checker/" style="color:#7c3aed;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">睡眠の質チェッカー →</a>
@@ -138,7 +164,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
         <!-- 使い方セクション -->
-        <div class="card" style="margin-top:8px;background:#f8fafc;">
+        <div class="card side-content" style="margin-top:8px;background:#f8fafc;">
             <h2 style="font-size:15px;font-weight:700;margin-bottom:12px;color:#374151;">📖 使い方</h2>
             <ol style="padding-left:20px;font-size:13px;color:#475569;line-height:1.9;">
                 <li>「チェックスタート」ボタンをクリックする</li>
@@ -150,7 +176,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         </div>
 
         <!-- FAQ セクション -->
-        <div class="card" style="margin-top:8px;">
+        <div class="card side-content" style="margin-top:8px;">
             <h2 style="font-size:15px;font-weight:700;margin-bottom:14px;color:#374151;">❓ よくある質問</h2>
             <div style="display:flex;flex-direction:column;gap:14px;">
             <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
@@ -177,7 +203,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         </div>
 
         <!-- SNSシェアCTA -->
-        <div class="card" style="margin-top:8px;text-align:center;background:linear-gradient(135deg,#F5F3FF,#EDE9FE);" role="complementary" aria-label="SNSシェア">
+        <div class="card side-content" style="margin-top:8px;text-align:center;background:linear-gradient(135deg,#F5F3FF,#EDE9FE);" role="complementary" aria-label="SNSシェア">
             <p style="font-size:13px;font-weight:600;color:#374151;margin-bottom:10px;">📣 友人・家族にシェアする</p>
             <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
                 <a href="https://twitter.com/intent/tweet?text=%E5%A7%BF%E5%8B%A2%E3%83%81%E3%82%A7%E3%83%83%E3%82%AB%E3%83%BC%20%23無料ツール&url=https%3A%2F%2Fappadaycreator.com%2Fposture-checker%2F" target="_blank" rel="noopener" aria-label="姿勢チェッカーをXでシェア" style="background:#1DA1F2;color:white;padding:8px 16px;border-radius:8px;font-size:13px;text-decoration:none;font-weight:600;min-height:44px;display:inline-flex;align-items:center;">𝕏 シェア</a>
@@ -209,41 +235,122 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
       {text:'Q5. 立ったとき、お尻が後ろに突き出ている感じや、腰が反り過ぎる感じがありますか？',opts:['ない','少し気になる','よく言われる','腰痛持ちでもある']},
       {text:'Q6. 靴底の減り方は？',opts:['均一に減る','外側がよく減る','内側がよく減る','前の方だけ減る']},
     ];
+    const MAX_SCORE = 18; // 6問 × 最大3点
     let cur=0; const ans=[];
-    function startQuiz(){cur=0;ans.length=0;document.getElementById('quiz-start').style.display='none';document.getElementById('quiz-area').style.display='block';renderQ();}
+
+    function setSideContent(hidden){
+      document.querySelectorAll('.side-content').forEach(el=>{
+        el.classList.toggle('quiz-hidden', hidden);
+      });
+    }
+
+    function startQuiz(){
+      cur=0; ans.length=0;
+      document.getElementById('quiz-start').style.display='none';
+      document.getElementById('result').classList.remove('show');
+      setSideContent(true);
+      document.getElementById('quiz-area').style.display='block';
+      document.getElementById('quiz-area').scrollIntoView({behavior:'smooth',block:'start'});
+      renderQ();
+    }
+
     function renderQ(){
       const q=QS[cur];
       document.getElementById('q-num').textContent=cur+1;
       document.getElementById('q-bar').style.width=((cur+1)/QS.length*100)+'%';
       document.getElementById('q-text').textContent=q.text;
       document.getElementById('q-options').innerHTML=q.opts.map((o,i)=>`<button class="quiz-opt" onclick="answer(${i})">${o}</button>`).join('');
+      document.getElementById('btn-back').style.display=cur>0?'':'none';
     }
-    function answer(idx){ans.push(idx);cur++;if(cur>=QS.length)showResult();else renderQ();}
+
+    function back(){
+      if(cur<=0) return;
+      ans.pop(); cur--;
+      renderQ();
+    }
+
+    function answer(idx){
+      ans.push(idx); cur++;
+      if(cur>=QS.length) showResult(); else renderQ();
+    }
+
+    // adviceテキストを①②③④ステップに分割してカード表示
+    function buildAdviceHTML(advice){
+      // 見出し部分（【...】）を取得
+      const headerMatch = advice.match(/^【(.+?)】/);
+      const header = headerMatch ? `<div style="font-size:13px;font-weight:700;color:#374151;margin-bottom:8px;">【${headerMatch[1]}】</div>` : '';
+      const body = headerMatch ? advice.replace(/^【.+?】/, '').trim() : advice;
+
+      // ①②③④などの丸数字で分割
+      const parts = body.split(/(?=[①②③④⑤⑥])/).filter(s=>s.trim());
+      if(parts.length<=1){
+        // ステップなし：通常テキスト
+        return `${header}<p style="font-size:13px;line-height:1.9;color:#374151;">${body}</p>`;
+      }
+      const circles=['①','②','③','④','⑤','⑥'];
+      const cards = parts.map((p,i)=>{
+        const text=p.replace(/^[①②③④⑤⑥]/, '').trim();
+        return `<div class="step-card"><div class="step-num">${i+1}</div><div>${text}</div></div>`;
+      }).join('');
+      return `${header}<div class="step-cards">${cards}</div>`;
+    }
+
     function showResult(){
       const score=ans.reduce((s,a)=>s+a,0);
-      let title,problems=[],advice;
-      if(score<=3){title='✨ 良好な姿勢タイプ';advice='姿勢バランスは良好です！現在の習慣を維持しながら、30分に1回は席を立つ・胸を開くストレッチを取り入れて予防しましょう。';}
-      else if(score<=8){
-        title='😐 軽度の姿勢崩れタイプ';
+      let title, titleColor, problems=[], advice, gaugeColor;
+
+      if(score<=3){
+        title='✨ 良好な姿勢タイプ'; titleColor='#059669'; gaugeColor='#10b981';
+        advice='姿勢バランスは良好です！現在の習慣を維持しながら、①30分に1回は席を立って軽く歩く ②胸を開くストレッチを1日1回取り入れる ③スマホは目の高さに持つ習慣をつける。予防ケアで良い姿勢をキープしましょう。';
+      } else if(score<=8){
+        title='😐 軽度の姿勢崩れタイプ'; titleColor='#d97706'; gaugeColor='#f59e0b';
         if(ans[0]>=2) problems.push('長時間のデバイス使用による前傾姿勢');
         if(ans[3]>=2) problems.push('慢性的な肩こり・首こり');
         advice='【改善エクササイズ】①壁立ち：後頭部・肩・お尻・かかとを壁につけて30秒キープ ②胸張りストレッチ：両手を後ろで組み胸を開く ③あご引き：あごを引いて首の後ろを伸ばす（各10回×3セット）';
       } else if(score<=14){
-        title='⚠️ 猫背・巻き肩タイプ';
+        title='⚠️ 猫背・巻き肩タイプ'; titleColor='#ea580c'; gaugeColor='#f97316';
         problems.push('猫背・巻き肩の傾向あり');
         if(ans[4]>=2) problems.push('腰椎前彎（反り腰）の可能性');
-        advice='【重点改善】①肩甲骨寄せ：胸を張り肩甲骨を中央に寄せて5秒キープ（10回） ②タオルストレッチ：タオルを両手で持ち上げ・後ろへ ③ドローイン：息を吐きながらお腹を凹ませ5秒キープ。デスクワーク中のモニター高さ調整も重要です。';
+        advice='【重点改善】①肩甲骨寄せ：胸を張り肩甲骨を中央に寄せて5秒キープ（10回） ②タオルストレッチ：タオルを両手で持ち上げ頭上から後ろへゆっくり下げる（10回） ③ドローイン：息を吐きながらお腹を凹ませ5秒キープ（10回） ④モニター高さ調整：画面上端が目線の高さになるよう設定する';
       } else {
-        title='🔴 姿勢改善が急務なタイプ';
+        title='🔴 姿勢改善が急務なタイプ'; titleColor='#dc2626'; gaugeColor='#ef4444';
         problems.push('複合的な姿勢問題（猫背＋骨盤歪み）');
-        advice='【専門家相談推奨】複数の姿勢問題が重なっています。整体・整形外科での診断を推奨します。日常では①座り姿勢を15分に1回リセット ②スマホを目の高さに ③硬めのマットレスで就寝 ④腹筋・背筋のバランストレーニングを開始しましょう。';
+        advice='【専門家相談推奨】①座り姿勢を15分に1回リセット：一度立ち上がりその場で軽くストレッチ ②スマホを目の高さに：首への負担を減らす ③硬めのマットレスで就寝：腰のサポートを改善 ④腹筋・背筋バランストレーニング：プランク30秒×3セットから始める。整体・整形外科での診断も推奨します。';
       }
+
       document.getElementById('r-title').textContent=title;
+      document.getElementById('r-title').style.color=titleColor;
       document.getElementById('r-problems').innerHTML=problems.map(p=>`<span style="display:inline-block;background:#7C3AED20;color:#7C3AED;padding:4px 10px;border-radius:20px;font-size:12px;margin:2px;">${p}</span>`).join('');
-      document.getElementById('r-advice').innerHTML=advice.replace(/【/g,'<strong>【').replace(/】/g,'】</strong>');
-      document.getElementById('result').classList.add('show');
+
+      // スコアゲージ（アニメーション付き）
+      const pct=Math.round(score/MAX_SCORE*100);
+      document.getElementById('r-score-text').textContent=`${pct}点 / 100点`;
+      const gauge=document.getElementById('r-gauge');
+      gauge.style.background=gaugeColor;
+      gauge.style.width='0';
+      setTimeout(()=>{ gauge.style.width=pct+'%'; }, 100);
+
+      // アドバイスステップカード
+      document.getElementById('r-advice').innerHTML=buildAdviceHTML(advice);
+
+      // 結果シェアボタン
+      const shareText=encodeURIComponent(`私の姿勢タイプは「${title}」でした！あなたも診断してみて\u{1F447} #姿勢チェッカー`);
+      const shareUrl=encodeURIComponent('https://appadaycreator.com/posture-checker/');
+      document.getElementById('r-share').innerHTML=
+        `<a href="https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}" target="_blank" rel="noopener" style="background:#1DA1F2;color:white;padding:8px 16px;border-radius:8px;font-size:13px;text-decoration:none;font-weight:600;min-height:44px;display:inline-flex;align-items:center;">𝕏 結果をシェア</a>`+
+        `<a href="https://line.me/R/msg/text/?${shareText}%0A${shareUrl}" target="_blank" rel="noopener" style="background:#00B900;color:white;padding:8px 16px;border-radius:8px;font-size:13px;text-decoration:none;font-weight:600;min-height:44px;display:inline-flex;align-items:center;">LINE</a>`;
+
       document.getElementById('quiz-area').style.display='none';
+      document.getElementById('result').classList.add('show');
+      setSideContent(false);
       document.getElementById('result').scrollIntoView({behavior:'smooth'});
+    }
+
+    function resetQuiz(){
+      setSideContent(false);
+      document.getElementById('result').classList.remove('show');
+      document.getElementById('quiz-start').style.display='block';
+      window.scrollTo({top:0,behavior:'smooth'});
     }
     </script>
 </body>
