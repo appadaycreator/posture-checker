@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<!-- Consent Mode v2 -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});(function(){try{var k='cookie-consent-v2',o='cookie-consent';var c=localStorage.getItem(k);if(!c&&localStorage.getItem(o)==='1')c='granted';if(c){var s=c==='granted'?'granted':'denied';gtag('consent','update',{'analytics_storage':s,'ad_storage':s,'ad_user_data':s,'ad_personalization':s});}}catch(e){}})();</script>
+<!-- End Consent Mode v2 -->
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
 new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
@@ -12,9 +15,12 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#7c3aed" />
     <title>姿勢チェッカー【無料】猫背・巻き肩・骨盤診断</title>
-    <meta name="description" content="日常の姿勢習慣から猫背・巻き肩・骨盤傾きをセルフチェック。悩み別の改善エクササイズとストレッチをご案内します。登録不要・完全無料でご利用いただけます。">
+    <meta name="description" content="日常の姿勢習慣から猫背・巻き肩・骨盤傾きをセルフチェック。悩み別の改善エクササイズとストレッチをご案内します">
+<meta name="author" content="AppADayCreator">
     <link rel="canonical" href="https://appadaycreator.com/posture-checker/">
-    <link rel="manifest" href="/posture-checker/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/posture-checker/manifest.json">
     <meta property="og:title" content="姿勢チェッカー【無料】猫背・巻き肩・骨盤診断">
     <meta property="og:description" content="日常の姿勢習慣から猫背・巻き肩・骨盤傾きをセルフチェック。悩み別の改善エクササイズとストレッチをご案内します。">
     <meta property="og:url" content="https://appadaycreator.com/posture-checker/">
@@ -39,12 +45,14 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
     <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","s3t9vl8h3v");</script>
     <!-- AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"姿勢チェッカー","description":"日常の姿勢習慣から猫背・巻き肩・骨盤傾きをセルフチェック。悩み別の改善エクササイズとストレッチをご案内します。","url":"https://appadaycreator.com/posture-checker/","applicationCategory":"UtilityApplication","operatingSystem":"Any","inLanguage":"ja","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"author":{"@type":"Organization","name":"AppADayCreator","url":"https://appadaycreator.com/"}}</script>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "姿勢チェッカーは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、完全無料・登録不要でご利用いただけます。"}}, {"@type": "Question", "name": "チェック結果は医療的診断として使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "本ツールはあくまで日常習慣に基づくセルフチェックです。腰痛・肩こりが重度の場合や長期間続く場合は、整形外科・整体院への受診をおすすめします。"}}, {"@type": "Question", "name": "姿勢改善にどのくらい時間がかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "日常的な意識と改善エクササイズを続けることで、2〜4週間で変化を感じる方が多いです。長年の習慣による姿勢崩れは数ヶ月かかることもあります。"}}, {"@type": "Question", "name": "猫背とストレートネックは別の問題ですか？", "acceptedAnswer": {"@type": "Answer", "text": "関連していることが多いです。猫背になると頭が前に出てストレートネック（スマホ首）になりやすくなります。本チェックで両方を評価します。"}}, {"@type": "Question", "name": "毎日続けてチェックするのが効果的ですか？", "acceptedAnswer": {"@type": "Answer", "text": "週1〜2回のセルフチェックで変化を追うことをおすすめします。改善エクササイズの継続が重要です。"}}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"チェック結果は医療的診断として使えますか？","acceptedAnswer":{"@type":"Answer","text":"本ツールはあくまで日常習慣に基づくセルフチェックです。腰痛・肩こりが重度の場合や長期間続く場合は、整形外科・整体院への受診をおすすめします。"}},{"@type":"Question","name":"姿勢改善にどのくらい時間がかかりますか？","acceptedAnswer":{"@type":"Answer","text":"日常的な意識と改善エクササイズを続けることで、2〜4週間で変化を感じる方が多いです。長年の習慣による姿勢崩れは数ヶ月かかることもあります。"}},{"@type":"Question","name":"猫背とストレートネックは別の問題ですか？","acceptedAnswer":{"@type":"Answer","text":"関連していることが多いです。猫背になると頭が前に出てストレートネック（スマホ首）になりやすくなります。本チェックで両方を評価します。"}},{"@type":"Question","name":"毎日続けてチェックするのが効果的ですか？","acceptedAnswer":{"@type":"Answer","text":"週1〜2回のセルフチェックで変化を追うことをおすすめします。改善エクササイズの継続が重要です。"}}]}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"姿勢チェッカー【無料】猫背・巻き肩・骨盤診断の使い方","step":[{"@type":"HowToStep","position":1,"name":"必要事項を入力する","text":"フォームに必要な情報（数値・選択肢・条件）を入力または選択する"},{"@type":"HowToStep","position":2,"name":"診断・計算を実行する","text":"「診断する」「計算する」または「確認する」ボタンを押して結果を取得する"},{"@type":"HowToStep","position":3,"name":"結果・分析を確認する","text":"表示された診断結果・計算結果・グラフをじっくり確認する"},{"@type":"HowToStep","position":4,"name":"アドバイスを活用する","text":"結果に基づくアドバイスや提案を日常生活に取り入れる"},{"@type":"HowToStep","position":5,"name":"定期的に再チェックする","text":"生活変化に応じて定期的に再診断して進捗を追跡する"}]}</script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%); min-height: 100vh; color: #333; line-height: 1.6; }
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; background: #f8fafc; min-height: 100vh; color: #333; line-height: 1.6; }
         .site-header { background: #7C3AED; color: white; padding: 32px 20px; text-align: center; }
         .site-header .emoji { font-size: 52px; margin-bottom: 8px; }
         .site-header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
@@ -104,6 +112,9 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 
 /* AdSense unfilled: collapse empty ad slots */
 ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!important;height:0!important}
+
+/* トースト通知アニメーション */
+@keyframes slideUp{from{opacity:0;transform:translateX(-50%) translateY(20px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://appadaycreator.com/"},{"@type":"ListItem","position":2,"name":"健康","item":"https://appadaycreator.com/category/health/"},{"@type":"ListItem","position":3,"name":"姿勢チェッカー【無料】猫背・巻き肩・骨盤診断","item":"https://appadaycreator.com/posture-checker/"}]}</script>
 </head>
@@ -117,10 +128,29 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
         <h1>姿勢チェッカー</h1>
         <p>猫背・巻き肩・骨盤の歪みをセルフチェックして改善アドバイスを取得</p>
     </header>
+<div style="background:#4338ca;padding:5px 12px;text-align:right;font-size:.78rem"><a href="/blog/" style="color:#c7d2fe;text-decoration:none;font-weight:600">📖 コラム</a>&nbsp;｜&nbsp;<a href="/" style="color:#c7d2fe;text-decoration:none">ホーム</a></div>
+<!-- r21-breadcrumb -->
+<nav aria-label="パンくずリスト" style="background:#f8fafc;border-bottom:1px solid #e2e8f0;padding:5px 16px;font-size:.78rem;color:#6b7280;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
+  <a href="/" style="color:#4f46e5;text-decoration:none">ホーム</a>
+  <span style="margin:0 .35rem;color:#9ca3af">›</span>
+  <span style="color:#374151">姿勢チェッカー【無料】猫背・巻き肩・骨盤診断</span>
+</nav>
+
 
     <main id="main-content" class="container" role="main" aria-label="姿勢チェッカーのメインコンテンツ">
-        <ins class="adsbygoogle" style="display:block;min-height:0;margin:12px 0" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<nav aria-label="パンくずリスト" style="background:#f8fafc;border-bottom:1px solid #e2e8f0;padding:6px 0;">
+  <div class="container mx-auto px-4">
+    <ol style="display:flex;flex-wrap:wrap;align-items:center;gap:4px;font-size:0.8rem;color:#6b7280;list-style:none;margin:0;padding:0;">
+      <li><a href="https://appadaycreator.com/" style="color:#4b5563;text-decoration:none;" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#4b5563'">ホーム</a></li>
+      <li style="color:#9ca3af;">›</li>
+      <li><a href="https://appadaycreator.com/category/health/" style="color:#4b5563;text-decoration:none;" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#4b5563'">健康・医療</a></li>
+      <li style="color:#9ca3af;">›</li>
+      <li style="color:#1f2937;">姿勢チェッカー猫背・巻き肩・骨盤診断</li>
+    </ol>
+  </div>
+</nav>
+        <ins class="adsbygoogle" style="display:block;min-height:90px;margin:12px 0" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>try{try{(adsbygoogle = window.adsbygoogle || []).push({});}catch(e){}}catch(e){}</script>
 
         <div class="card" id="quiz-start">
           <h2 style="font-size:18px;font-weight:700;margin-bottom:12px;">🧍 姿勢セルフチェック</h2>
@@ -141,19 +171,64 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
         </div>
         <div class="result" id="result">
           <div class="card">
-            <h3 id="r-title" style="font-size:20px;font-weight:700;margin-bottom:8px;"></h3>
-            <div id="r-problems" style="margin-bottom:12px;"></div>
-            <!-- スコアゲージ -->
-            <div class="score-gauge-wrap">
-              <div style="font-size:12px;color:#6b7280;margin-bottom:4px;">姿勢スコア: <strong id="r-score-text"></strong></div>
-              <div class="score-gauge-track"><div class="score-gauge-fill" id="r-gauge"></div></div>
-              <div class="score-gauge-label"><span>良好</span><span>要改善</span></div>
+            <!-- タブ切り替え -->
+            <div style="display:flex;gap:8px;border-bottom:2px solid #e5e7eb;margin-bottom:16px;flex-wrap:wrap;">
+              <button onclick="switchResultTab('main')" id="tab-main" style="background:none;border:none;padding:12px 16px;font-size:14px;font-weight:600;color:#7C3AED;border-bottom:3px solid #7C3AED;margin-bottom:-2px;cursor:pointer;">📊 診断結果</button>
+              <button onclick="switchResultTab('compare')" id="tab-compare" style="background:none;border:none;padding:12px 16px;font-size:14px;font-weight:600;color:#999;cursor:pointer;">🔄 比較・シミュレーション</button>
             </div>
-            <!-- アドバイスステップ -->
-            <div id="r-advice"></div>
-            <!-- 結果シェアボタン -->
-            <div id="r-share" style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap;"></div>
-            <button class="btn" style="margin-top:16px;" onclick="resetQuiz()">もう一度チェック</button>
+
+            <!-- タブ1: 診断結果（メイン）-->
+            <div id="tab-main-content">
+              <h3 id="r-title" style="font-size:20px;font-weight:700;margin-bottom:8px;"></h3>
+              <div id="r-problems" style="margin-bottom:12px;"></div>
+              <!-- 診断時間 -->
+              <div id="r-time" style="font-size:12px;color:#666;margin-bottom:14px;padding:10px;background:#f3f4f6;border-radius:8px;"></div>
+              <!-- スコアゲージ -->
+              <div class="score-gauge-wrap">
+                <div style="font-size:12px;color:#6b7280;margin-bottom:4px;">姿勢スコア: <strong id="r-score-text"></strong></div>
+                <div class="score-gauge-track"><div class="score-gauge-fill" id="r-gauge"></div></div>
+                <div class="score-gauge-label"><span>良好</span><span>要改善</span></div>
+              </div>
+              <!-- スコア改善トレンド -->
+              <div id="r-trend" style="margin:10px 0;"></div>
+              <!-- 改善履歴グラフ -->
+              <div id="r-history-chart" style="margin:16px 0;">
+                <canvas id="historyChart" style="max-height:300px;"></canvas>
+              </div>
+              <!-- アドバイスステップ -->
+              <div id="r-advice"></div>
+              <!-- 次のステップ -->
+              <div id="r-next-steps" style="margin-top:16px;"></div>
+              <!-- 結果シェアボタン -->
+              <div id="r-share" style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap;"></div>
+              <!-- エクスポート・印刷ボタン -->
+              <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;">
+                <button onclick="copyResultText()" style="background:#8b5cf6;color:white;border:none;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;min-height:44px;transition:opacity .2s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'" title="診断結果をテキストでコピー">📋 結果をコピー</button>
+                <button onclick="downloadHistoryCSV()" style="background:#06b6d4;color:white;border:none;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;min-height:44px;transition:opacity .2s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'" title="診断履歴をCSVでダウンロード">📥 履歴をCSV</button>
+                <button onclick="window.print()" style="background:#64748b;color:white;border:none;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;min-height:44px;transition:opacity .2s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'" title="結果を印刷またはPDFで保存">🖨️ 印刷</button>
+              </div>
+              <button class="btn" style="margin-top:16px;" onclick="resetQuiz()">もう一度チェック</button>
+            </div>
+
+            <!-- タブ2: 比較・シミュレーション -->
+            <div id="tab-compare-content" style="display:none;">
+              <h3 style="font-size:16px;font-weight:700;margin-bottom:12px;">📊 シミュレーション</h3>
+              <p style="font-size:13px;color:#666;margin-bottom:16px;">現在の回答を変更して、「もし〜だったら」のスコアを確認できます。</p>
+
+              <!-- シミュレーション用フォーム -->
+              <div id="sim-form" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;margin-bottom:16px;"></div>
+
+              <!-- 比較テーブル -->
+              <div style="margin-top:16px;">
+                <h4 style="font-size:13px;font-weight:700;margin-bottom:10px;">📈 比較結果</h4>
+                <div id="compare-table" style="overflow-x:auto;"></div>
+              </div>
+
+              <div style="margin-top:12px;display:flex;gap:8px;">
+                <button onclick="clearSimulation()" style="background:#e5e7eb;color:#374151;border:none;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;min-height:44px;">🔄 リセット</button>
+                <button onclick="saveSimResult()" style="background:#10b981;color:white;border:none;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;min-height:44px;">💾 このパターンを保存</button>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -167,8 +242,8 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
             </div>
         </div>
 
-        <ins class="adsbygoogle" style="display:block;min-height:0;margin:12px 0" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <ins class="adsbygoogle" style="display:block;min-height:90px;margin:12px 0" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>try{try{(adsbygoogle = window.adsbygoogle || []).push({});}catch(e){}}catch(e){}</script>
 
         <!-- 使い方セクション -->
         <div class="card side-content" style="margin-top:8px;background:#f8fafc;">
@@ -186,10 +261,7 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
         <div class="card side-content" style="margin-top:8px;">
             <h2 style="font-size:15px;font-weight:700;margin-bottom:14px;color:#374151;">❓ よくある質問</h2>
             <div style="display:flex;flex-direction:column;gap:14px;">
-            <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
-              <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: 姿勢チェッカーは無料で使えますか？</p>
-              <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: はい、完全無料・登録不要でご利用いただけます。</p>
-            </div>
+            
             <div style="border-bottom:1px solid #f1f5f9;padding-bottom:12px;">
               <p style="font-size:14px;font-weight:600;color:#374151;margin-bottom:4px;">Q: チェック結果は医療的診断として使えますか？</p>
               <p style="font-size:13px;color:#6b7280;line-height:1.7;">A: 本ツールはあくまで日常習慣に基づくセルフチェックです。腰痛・肩こりが重度の場合や長期間続く場合は、整形外科・整体院への受診をおすすめします。</p>
@@ -210,7 +282,7 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
         </div>
 
         <!-- SNSシェアCTA -->
-        <div class="card side-content" style="margin-top:8px;text-align:center;background:linear-gradient(135deg,#F5F3FF,#EDE9FE);" role="complementary" aria-label="SNSシェア">
+        <div class="card side-content" style="margin-top:8px;text-align:center;background:#f0f9ff;" role="complementary" aria-label="SNSシェア">
             <p style="font-size:13px;font-weight:600;color:#374151;margin-bottom:10px;">📣 友人・家族にシェアする</p>
             <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
                 <a href="https://twitter.com/intent/tweet?text=%E5%A7%BF%E5%8B%A2%E3%83%81%E3%82%A7%E3%83%83%E3%82%AB%E3%83%BC%20%23無料ツール&url=https%3A%2F%2Fappadaycreator.com%2Fposture-checker%2F" target="_blank" rel="noopener" aria-label="姿勢チェッカーをXでシェア" style="background:#1DA1F2;color:white;padding:8px 16px;border-radius:8px;font-size:13px;text-decoration:none;font-weight:600;min-height:44px;display:inline-flex;align-items:center;">𝕏 シェア</a>
@@ -219,10 +291,90 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
         </div>
 
         <!-- 免責事項 -->
-        <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:12px;margin:8px 0;font-size:12px;color:#92400e;">
-            <strong>⚠️ 免責事項</strong>：本ツールの計算・診断結果はあくまで参考情報です。医療・法律・税務・投資等の専門的判断が必要な場合は、必ず資格を持つ専門家にご相談ください。本サービスの利用により生じた損害について、当サービスは一切の責任を負いません。
-        </div>
-    </main>
+        <p style="font-size:11px;color:#92400e;margin:6px 0">⚠️ 本ツールの結果は参考情報です。専門的判断は資格を持つ専門家にご相談ください。</p>
+    
+<section aria-labelledby="faq-h" class="bg-white rounded-2xl shadow-md p-4 mb-4" style="max-width:740px;margin-left:auto;margin-right:auto">
+  
+<div style="background:#f0f7ff;border:1px solid #bfdbfe;border-radius:12px;padding:1.5rem 1.75rem;margin:2rem 0" id="tool-desc-box">
+  <h2 style="font-size:1.05rem;font-weight:800;color:#1e40af;margin:0 0 1rem">📋 このツールの詳細</h2>
+  <p style="color:#374151;margin:0 0 .75rem;line-height:1.8">「姿勢チェッカー」は、日常の姿勢習慣から猫背・巻き肩・骨盤傾きをセルフチェック。悩み別の改善エクササイズとストレッチをご案内します。</p>
+</div>
+<div style="background:#eaf4fb;border-left:4px solid #1976d2;padding:20px 24px;margin:24px 0;border-radius:0 8px 8px 0">
+  <h3 style="font-size:1.1rem;font-weight:800;color:#1e3a5f">このツールでできること</h3>
+  <p style="margin:8px 0 0;line-height:1.7;color:#1a1a2e">座り方・立ち方・デスクワーク環境に関する質問に答えると、姿勢の問題点をチェックリスト形式で診断します。肩こり・腰痛・首の疲れとの関連性も分析できます。</p>
+</div>
+<div style="background:#f0fdf4;border-left:4px solid #388e3c;padding:20px 24px;margin:24px 0;border-radius:0 8px 8px 0">
+  <h3 style="font-size:1.1rem;font-weight:800;color:#1b5e20">活用シーン・使い方</h3>
+  <p style="margin:8px 0 0;line-height:1.7;color:#1a1a2e">長時間のデスクワークで体の疲れ・痛みを感じている方や、テレワーク環境を見直したい方に最適です。子どもの姿勢改善のための学習環境チェックにも活用できます。</p>
+</div>
+<div style="background:#fff8e1;border-left:4px solid #f57c00;padding:20px 24px;margin:24px 0;border-radius:0 8px 8px 0">
+  <h3 style="font-size:1.1rem;font-weight:800;color:#e65100">注意点・補足</h3>
+  <p style="margin:8px 0 0;line-height:1.7;color:#1a1a2e">姿勢改善には継続的な意識付けが必要です。慢性的な腰痛・肩こりが続く場合は整形外科・理学療法士への受診をおすすめします。</p>
+</div>
+<!-- r22-editorial -->
+<div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:.75rem;padding:1.5rem;margin:1.5rem 0">
+  <h2 style="font-size:1.05rem;font-weight:800;color:#14532d;margin:0 0 1rem;border-left:4px solid #16a34a;padding-left:.75rem">健康管理の基礎知識（厚生労働省データ）</h2>
+  <p style="font-size:.88rem;color:#4b5563;margin:0 0 .75rem">厚生労働省「国民健康栄養調査」などのデータから、日本人の健康状態と予防のポイントを整理しました。</p>
+  <table style="width:100%;border-collapse:collapse;font-size:.83rem">
+    <thead>
+      <tr style="background:#bbf7d0">
+        <th style="padding:.5rem .75rem;text-align:left;border:1px solid #bbf7d0;color:#14532d">項目</th>
+        <th style="padding:.5rem .75rem;text-align:left;border:1px solid #bbf7d0;color:#14532d">データ</th>
+        <th style="padding:.5rem .75rem;text-align:left;border:1px solid #bbf7d0;color:#14532d">出典</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background:#f0fdf4">
+        <td style="padding:.5rem .75rem;border:1px solid #bbf7d0;font-weight:600;color:#14532d">成人の肥満割合（BMI25以上）</td>
+        <td style="padding:.5rem .75rem;border:1px solid #bbf7d0"><strong>男性33.0%・女性22.3%（2022年）</strong></td>
+        <td style="padding:.5rem .75rem;border:1px solid #bbf7d0;font-size:.78rem;color:#6b7280">厚生労働省「国民健康栄養調査」2022年</td>
+      </tr>
+      <tr style="">
+        <td style="padding:.5rem .75rem;border:1px solid #bbf7d0;font-weight:600;color:#14532d">1日の歩数の目標</td>
+        <td style="padding:.5rem .75rem;border:1px solid #bbf7d0"><strong>男性8,000歩・女性7,000歩（厚生労働省推奨）</strong></td>
+        <td style="padding:.5rem .75rem;border:1px solid #bbf7d0;font-size:.78rem;color:#6b7280">厚生労働省「健康日本21（第二次）」</td>
+      </tr>
+      <tr style="background:#f0fdf4">
+        <td style="padding:.5rem .75rem;border:1px solid #bbf7d0;font-weight:600;color:#14532d">睡眠時間の目安（成人）</td>
+        <td style="padding:.5rem .75rem;border:1px solid #bbf7d0"><strong>7〜9時間が推奨（6時間未満は健康リスク増）</strong></td>
+        <td style="padding:.5rem .75rem;border:1px solid #bbf7d0;font-size:.78rem;color:#6b7280">WHO・厚生労働省「健康づくりのための睡眠ガイド2023」</td>
+      </tr>
+      <tr style="">
+        <td style="padding:.5rem .75rem;border:1px solid #bbf7d0;font-weight:600;color:#14532d">生活習慣病の主な予防因子</td>
+        <td style="padding:.5rem .75rem;border:1px solid #bbf7d0"><strong>適度な運動・バランスの良い食事・禁煙・適量飲酒</strong></td>
+        <td style="padding:.5rem .75rem;border:1px solid #bbf7d0;font-size:.78rem;color:#6b7280">厚生労働省「生活習慣病予防のための健康情報」</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- r20-tool-links -->
+<div id="tool-disclaimer" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.875rem">
+  <p style="font-weight:700;color:#374151;margin:0 0 .5rem">⚠️ 計算結果の活用にあたって</p>
+  <ul style="margin:0;padding-left:1.25rem;color:#4b5563;line-height:1.9"><li><a href="https://www.caa.go.jp/" target="_blank" rel="noopener noreferrer" style="color:#4f46e5;font-size:.85rem">消費者庁「くらしの安心ガイド」</a></li></ul>
+</div>
+<h2 id="faq-h" style="font-size:1.05rem;font-weight:700;margin-bottom:12px;border-left:4px solid #4f46e5;padding-left:10px;">よくある質問</h2>
+  <dl style="line-height:1.8;">
+    <dt style="font-weight:600;color:#1e293b;padding:8px 0 4px">Q. 正しい姿勢の基本と、猫背になりやすい原因は？</dt>
+    <dd style="font-size:.875rem;color:#475569;margin:0 0 12px;padding-left:12px;line-height:1.8">正しい立ち姿勢の基本は「耳・肩・骨盤・くるぶしが一直線になること」です。デスクワークでは「骨盤を立てた状態でお尻を椅子の奥まで入れる」「モニターを目線より少し低め（15〜20度）に設置」「足裏が床に着く高さに椅子を調整」することが重要です。猫背になりやすい原因として「長時間のスマートフォン使用（頭を前に傾ける姿勢）」「腹筋・背筋の筋力不足」「デスクが低すぎる・椅子が高すぎる」「胸や肩前面（大胸筋・小胸筋）の硬さ」があります。</dd>
+    <dt style="font-weight:600;color:#1e293b;padding:8px 0 4px">Q. 姿勢を改善するために効果的なストレッチ・エクサイズは？</dt>
+    <dd style="font-size:.875rem;color:#475569;margin:0 0 12px;padding-left:12px;line-height:1.8">猫背・巻き肩改善に効果的なストレッチとして「胸を開くストレッチ（手を後ろで組んで胸を張る・30秒×3セット）」「肩甲骨を寄せる運動（肘を90度に曲げて肩甲骨を寄せる）」「股関節前面（腸腰筋）のストレッチ（片足を前に出してランジポーズ）」があります。姿勢改善の筋力トレーニングとして「プランク（体幹強化）」「ロウイング（背中の筋肉）」「ヒップヒンジ（臀筋・ハムストリング）」が特に有効です。1日10〜15分の継続が効果的で、習慣化が重要です。</dd>
+    <dt style="font-weight:600;color:#1e293b;padding:8px 0 4px">Q. 姿勢の悪さは健康にどのような影響を与えますか？</dt>
+    <dd style="font-size:.875rem;color:#475569;margin:0 0 12px;padding-left:12px;line-height:1.8">姿勢の悪さが引き起こしうる健康への影響として「肩こり・首こり（僧帽筋・菱形筋の過緊張）」「頭痛（首の筋肉の緊張が原因の緊張型頭痛）」「腰痛（腰の筋肉への過負荷・椎間板への不均等な圧力）」「消化器系の不調（前かがみの姿勢は消化を妨げる場合がある）」「呼吸が浅くなる（肺が広がりにくい）」があります。長期的な悪姿勢は脊椎の変形・骨密度の低下にもつながる可能性があります。デスクワーク中は「1時間に1回立ち上がる」習慣をつけることが推奨されています。</dd>
+  </dl>
+</section>
+<section style="margin:2rem 0;padding:1.5rem;background:#f8fafc;border-radius:.75rem;border:1px solid #e2e8f0">
+<h3 style="font-size:.95rem;font-weight:700;color:#1f2937;margin:1rem 0 .5rem">こんな方におすすめ</h3>
+<ul style="margin:0 0 1rem;padding-left:1.4rem;line-height:2;color:#374151">
+<li>長時間のデスクワークで肩こり・腰痛・首の痛みを感じている方</li>
+<li>スマートフォンの使いすぎで首・肩に違和感を覚えている方</li>
+<li>猫背を改善したくて正しい改善方法を知りたい方</li>
+</ul>
+<h3 style="font-size:.95rem;font-weight:700;color:#1f2937;margin:1rem 0 .5rem">よくある質問</h3>
+<div style="margin-bottom:.75rem"><p style="font-weight:700;color:#111827;margin:0 0 .3rem;font-size:.9rem">Q. 猫背は自分で治せますか？</p><p style="color:#374151;margin:0;font-size:.88rem;line-height:1.8">A. 軽度の猫背であれば日常的なストレッチと体幹トレーニングで改善可能です。胸椎のモビリティ改善・肩甲骨の引き締め運動・体幹強化の3点を続けることが効果的です。ただし痛みを伴う場合は医師や理学療法士に相談することをおすすめします。</p></div>
+<div style="margin-bottom:.75rem"><p style="font-weight:700;color:#111827;margin:0 0 .3rem;font-size:.9rem">Q. 正しい座り方の基本を教えてください。</p><p style="color:#374151;margin:0;font-size:.88rem;line-height:1.8">A. 椅子に深く腰掛け、股関節・膝・足首が90度になるよう高さを調整します。背もたれを使い腰椎の自然なS字カーブを保ちましょう。モニターは目の高さに合わせ、頭が前に出ないよう注意することが重要です。</p></div>
+<div><p style="font-weight:700;color:#111827;margin:0 0 .3rem;font-size:.9rem">Q. 姿勢改善にどれくらいの期間がかかりますか？</p><p style="color:#374151;margin:0;font-size:.88rem;line-height:1.8">A. 毎日10〜15分のストレッチと生活習慣の見直しを継続すれば、多くの方が2〜4週間で体の感覚の変化を実感できます。完全な改善には3ヶ月程度かかることが一般的で、継続的な取り組みが最も重要です。</p></div>
+</section>
+</main>
 
     
 <script>
@@ -234,8 +386,9 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
       {text:'Q5. 立ったとき、お尻が後ろに突き出ている感じや、腰が反り過ぎる感じがありますか？',opts:['ない','少し気になる','よく言われる','腰痛持ちでもある']},
       {text:'Q6. 靴底の減り方は？',opts:['均一に減る','外側がよく減る','内側がよく減る','前の方だけ減る']},
     ];
-    const MAX_SCORE = 18; // 6問 × 最大3点
-    let cur=0; const ans=[];
+    const MAX_SCORE = 18;
+    const NEXT_STEPS={good:{title:'🎯 推奨されるアクション',links:[{text:'ストレッチタイマー - 予防ケア用',url:'https://appadaycreator.com/stretch-timer/'}]},light:{title:'🎯 推奨されるアクション',links:[{text:'ストレッチタイマー - 軽度改善向け',url:'https://appadaycreator.com/stretch-timer/'},{text:'睡眠の質チェッカー - リカバリー支援',url:'https://appadaycreator.com/sleep-quality-checker/'}]},moderate:{title:'🎯 重点改善アクション',links:[{text:'ストレッチタイマー - 肩甲骨寄せプログラム',url:'https://appadaycreator.com/stretch-timer/'},{text:'腰痛リスクチェッカー - 腰椎ケア',url:'https://appadaycreator.com/back-pain-checker/'}]},severe:{title:'🎯 専門家相談と並行して',links:[{text:'腰痛リスクチェッカー - 複合問題の診断',url:'https://appadaycreator.com/back-pain-checker/'},{text:'ストレッチタイマー - 基礎トレーニング',url:'https://appadaycreator.com/stretch-timer/'}]}};
+    let cur=0, ans=[], startTime=0;
 
     function setSideContent(hidden){
       document.querySelectorAll('.side-content').forEach(el=>{
@@ -245,12 +398,25 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
 
     function startQuiz(){
       cur=0; ans.length=0;
+      startTime=Date.now();
       document.getElementById('quiz-start').style.display='none';
       document.getElementById('result').classList.remove('show');
       setSideContent(true);
       document.getElementById('quiz-area').style.display='block';
       document.getElementById('quiz-area').scrollIntoView({behavior:'smooth',block:'start'});
       renderQ();
+    }
+
+    function getTimeStr(ms){
+      const s=Math.floor(ms/1000);
+      return s<60?s+'秒':(Math.floor(s/60)+'分'+s%60+'秒');
+    }
+
+    function saveDiagnosis(type,score){
+      const hist=JSON.parse(localStorage.getItem('posture_hist')||'[]');
+      hist.unshift({date:new Date().toLocaleString('ja-JP'),type,score});
+      if(hist.length>10)hist.pop();
+      localStorage.setItem('posture_hist',JSON.stringify(hist));
     }
 
     function renderQ(){
@@ -296,30 +462,34 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
 
     function showResult(){
       const score=ans.reduce((s,a)=>s+a,0);
-      let title, titleColor, problems=[], advice, gaugeColor;
+      const elapsed=getTimeStr(Date.now()-startTime);
+      let title, titleColor, problems=[], advice, gaugeColor, stepType;
 
       if(score<=3){
-        title='✨ 良好な姿勢タイプ'; titleColor='#059669'; gaugeColor='#10b981';
+        title='✨ 良好な姿勢タイプ'; titleColor='#059669'; gaugeColor='#10b981'; stepType='good';
         advice='姿勢バランスは良好です！現在の習慣を維持しながら、①30分に1回は席を立って軽く歩く ②胸を開くストレッチを1日1回取り入れる ③スマホは目の高さに持つ習慣をつける。予防ケアで良い姿勢をキープしましょう。';
       } else if(score<=8){
-        title='😐 軽度の姿勢崩れタイプ'; titleColor='#d97706'; gaugeColor='#f59e0b';
+        title='😐 軽度の姿勢崩れタイプ'; titleColor='#d97706'; gaugeColor='#f59e0b'; stepType='light';
         if(ans[0]>=2) problems.push('長時間のデバイス使用による前傾姿勢');
         if(ans[3]>=2) problems.push('慢性的な肩こり・首こり');
         advice='【改善エクササイズ】①壁立ち：後頭部・肩・お尻・かかとを壁につけて30秒キープ ②胸張りストレッチ：両手を後ろで組み胸を開く ③あご引き：あごを引いて首の後ろを伸ばす（各10回×3セット）';
       } else if(score<=14){
-        title='⚠️ 猫背・巻き肩タイプ'; titleColor='#ea580c'; gaugeColor='#f97316';
+        title='⚠️ 猫背・巻き肩タイプ'; titleColor='#ea580c'; gaugeColor='#f97316'; stepType='moderate';
         problems.push('猫背・巻き肩の傾向あり');
         if(ans[4]>=2) problems.push('腰椎前彎（反り腰）の可能性');
-        advice='【重点改善】①肩甲骨寄せ：胸を張り肩甲骨を中央に寄せて5秒キープ（10回） ②タオルストレッチ：タオルを両手で持ち上げ頭上から後ろへゆっくり下げる（10回） ③ドローイン：息を吐きながらお腹を凹ませ5秒キープ（10回） ④モニター高さ調整：画面上端が目線の高さになるよう設定する';
+        advice='【重点改善】①肩甲骨寄せ：胸を張り肩甲骨を中央に寄せて5秒キープ（10回） ②タオルストレッチ：タオルを両手で持ち上げ頭上から後ろへゆっくり下げる（10回） ③ドローイン：息を吐きながらお腹を凹ませ5秒キープ（10回）';
       } else {
-        title='🔴 姿勢改善が急務なタイプ'; titleColor='#dc2626'; gaugeColor='#ef4444';
+        title='🔴 姿勢改善が急務なタイプ'; titleColor='#dc2626'; gaugeColor='#ef4444'; stepType='severe';
         problems.push('複合的な姿勢問題（猫背＋骨盤歪み）');
-        advice='【専門家相談推奨】①座り姿勢を15分に1回リセット：一度立ち上がりその場で軽くストレッチ ②スマホを目の高さに：首への負担を減らす ③硬めのマットレスで就寝：腰のサポートを改善 ④腹筋・背筋バランストレーニング：プランク30秒×3セットから始める。整体・整形外科での診断も推奨します。';
+        advice='【専門家相談推奨】①座り姿勢を15分に1回リセット ②スマホを目の高さに ③硬めのマットレスで就寝 ④腹筋・背筋バランストレーニング。整体・整形外科での診断を推奨します。';
       }
 
       document.getElementById('r-title').textContent=title;
       document.getElementById('r-title').style.color=titleColor;
       document.getElementById('r-problems').innerHTML=problems.map(p=>`<span style="display:inline-block;background:#7C3AED20;color:#7C3AED;padding:4px 10px;border-radius:20px;font-size:12px;margin:2px;">${p}</span>`).join('');
+
+      // 診断時間表示
+      document.getElementById('r-time').innerHTML=`⏱ <strong>${elapsed}</strong>で診断完了`;
 
       // スコアゲージ（アニメーション付き）
       const pct=Math.round(score/MAX_SCORE*100);
@@ -329,8 +499,15 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
       gauge.style.width='0';
       setTimeout(()=>{ gauge.style.width=pct+'%'; }, 100);
 
+      // スコア改善トレンド表示
+      displayScoreTrend(score);
+
       // アドバイスステップカード
       document.getElementById('r-advice').innerHTML=buildAdviceHTML(advice);
+
+      // 次のステップ
+      const nextStep=NEXT_STEPS[stepType];
+      document.getElementById('r-next-steps').innerHTML=`<div style="background:#f0f9ff;border-left:4px solid #0284c7;border-radius:8px;padding:12px;"><p style="font-size:13px;font-weight:700;color:#0c4a6e;margin-bottom:8px;">${nextStep.title}</p><div style="display:flex;flex-direction:column;gap:6px;">${nextStep.links.map(l=>`<a href="${l.url}" style="color:#0284c7;font-size:12px;text-decoration:none;padding:6px 0;">${l.text} →</a>`).join('')}</div></div>`;
 
       // 結果シェアボタン
       const shareText=encodeURIComponent(`私の姿勢タイプは「${title}」でした！あなたも診断してみて\u{1F447} #姿勢チェッカー`);
@@ -338,6 +515,12 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
       document.getElementById('r-share').innerHTML=
         `<a href="https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}" target="_blank" rel="noopener" style="background:#1DA1F2;color:white;padding:8px 16px;border-radius:8px;font-size:13px;text-decoration:none;font-weight:600;min-height:44px;display:inline-flex;align-items:center;">𝕏 結果をシェア</a>`+
         `<a href="https://line.me/R/msg/text/?${shareText}%0A${shareUrl}" target="_blank" rel="noopener" style="background:#00B900;color:white;padding:8px 16px;border-radius:8px;font-size:13px;text-decoration:none;font-weight:600;min-height:44px;display:inline-flex;align-items:center;">LINE</a>`;
+
+      // 診断履歴を保存
+      saveDiagnosis(stepType,score);
+
+      // グラフを描画
+      setTimeout(()=>{ renderHistoryChart(); }, 100);
 
       document.getElementById('quiz-area').style.display='none';
       document.getElementById('result').classList.add('show');
@@ -351,29 +534,327 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
       document.getElementById('quiz-start').style.display='block';
       window.scrollTo({top:0,behavior:'smooth'});
     }
-    </script>
-    <!-- rakuten-affiliate-block -->
-    <div style="border:1px solid #BF0000;background:#fff9f9;border-radius:10px;padding:14px;margin:12px auto;max-width:480px;text-align:center;">
-      <p style="font-size:0.85rem;color:#4b5563;margin-bottom:8px;">🛒 関連商品を楽天市場で探す</p>
-      <a href="https://hb.afl.rakuten.co.jp/ichiba/541ad0d2.ce2bed12.541ad0d3.a1a2318c/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%25A7%25BF%25E5%258B%25A2%25E7%259F%25AF%25E6%25AD%25A3%2520%25E6%25A4%2585%25E5%25AD%2590%2520%25E3%2582%25B0%25E3%2583%2583%25E3%2582%25BA%2F&link_type=text" target="_blank" rel="nofollow sponsored noopener"
-         style="display:inline-block;background:#BF0000;color:white;padding:10px 24px;border-radius:8px;font-weight:bold;font-size:14px;text-decoration:none;">
-        楽天市場で「姿勢矯正 椅子 グッズ」を検索 →
-      </a>
-    </div>
-    <!-- /rakuten-affiliate-block -->
 
-    <!-- Amazon アフィリエイト -->
-    <div style="background:#f0fdf4;border:1px solid #86efac;border-radius:10px;padding:14px;margin:16px auto;max-width:500px;text-align:center;">
-      <p style="font-size:0.78em;color:#15803d;font-weight:bold;margin-bottom:8px;">📚 関連書籍・グッズをAmazonでチェック</p>
-      <a href="https://www.amazon.co.jp/s?k=姿勢チェッカー猫+本+おすすめ&tag=appadaycrea0f-22" target="_blank" rel="noopener noreferrer" class="js-track-affiliate" data-platform="Amazon" data-item-name="姿勢チェッカー猫 関連書籍" data-link-type="affiliate_link" style="display:inline-block;background:#ff9900;color:#fff;padding:9px 20px;border-radius:8px;font-size:0.85em;font-weight:bold;text-decoration:none;margin:4px;">🛒 姿勢チェッカー猫 関連書籍</a>
-      <a href="https://www.amazon.co.jp/s?k=姿勢チェッカー猫+入門+書籍&tag=appadaycrea0f-22" target="_blank" rel="noopener noreferrer" class="js-track-affiliate" data-platform="Amazon" data-item-name="姿勢チェッカー猫 入門ガイド" data-link-type="affiliate_link" style="display:inline-block;background:#ff9900;color:#fff;padding:9px 20px;border-radius:8px;font-size:0.85em;font-weight:bold;text-decoration:none;margin:4px;">🛒 姿勢チェッカー猫 入門ガイド</a>
-    </div>
+    // 改善履歴グラフを描画（Chart.js版）
+    let historyChartInstance=null;
+    function renderHistoryChart(){
+      const hist=JSON.parse(localStorage.getItem('posture_hist')||'[]');
+      if(hist.length<2) return;
+
+      const recentHist=hist.slice(0,10).reverse();
+      const labels=recentHist.map((_,i)=>`${i+1}回目`);
+      const scores=recentHist.map(h=>h.score);
+
+      // 色をスコアに応じて決定
+      const colors=recentHist.map(h=>
+        h.score<=3?'#10b981':h.score<=8?'#f59e0b':h.score<=14?'#f97316':'#ef4444'
+      );
+
+      const ctx=document.getElementById('historyChart');
+      if(historyChartInstance) historyChartInstance.destroy();
+
+      historyChartInstance=new Chart(ctx,{
+        type:'bar',
+        data:{
+          labels,
+          datasets:[{
+            label:'診断スコア',
+            data:scores,
+            backgroundColor:colors,
+            borderColor:colors,
+            borderWidth:1,
+            borderRadius:6,
+            barThickness:40
+          }]
+        },
+        options:{
+          responsive:true,
+          maintainAspectRatio:true,
+          indexAxis:'x',
+          plugins:{
+            legend:{display:false}
+          },
+          scales:{
+            y:{
+              beginAtZero:true,
+              max:18,
+              ticks:{stepSize:3},
+              grid:{drawBorder:false,color:'#e5e7eb'}
+            },
+            x:{grid:{display:false}}
+          }
+        }
+      });
+    }
+
+    // 診断結果テキストをコピー
+    function copyResultText(){
+      const title=document.getElementById('r-title').textContent;
+      const scoreText=document.getElementById('r-score-text').textContent;
+      const adviceEl=document.getElementById('r-advice');
+      const advice=adviceEl.innerText.replace(/[\n]{2,}/g,'\n');
+
+      const text=`【${title}】\nスコア: ${scoreText}\n\n${advice}\n\n診断元: https://appadaycreator.com/posture-checker/`;
+
+      navigator.clipboard.writeText(text).then(()=>{
+        showToast('✅ 結果をコピーしました');
+      }).catch(()=>{
+        alert('コピーできませんでした。ブラウザの制限をご確認ください。');
+      });
+    }
+
+    // 診断履歴をCSVダウンロード
+    function downloadHistoryCSV(){
+      const hist=JSON.parse(localStorage.getItem('posture_hist')||'[]');
+      if(hist.length===0){
+        alert('診断履歴がまだありません。チェックを複数回実行してください。');
+        return;
+      }
+
+      let csv='日時,診断タイプ,スコア\n';
+      hist.forEach(h=>{
+        const typeLabel={good:'良好',light:'軽度',moderate:'中度',severe:'重度'}[h.type]||h.type;
+        csv+=`"${h.date}","${typeLabel}",${h.score}\n`;
+      });
+
+      const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});
+      const link=document.createElement('a');
+      link.href=URL.createObjectURL(blob);
+      link.download='posture-history.csv';
+      link.click();
+      showToast('✅ CSVをダウンロードしました');
+    }
+
+    // スコア改善トレンド表示
+    function displayScoreTrend(currentScore){
+      const hist=JSON.parse(localStorage.getItem('posture_hist')||'[]');
+      if(hist.length<2){
+        document.getElementById('r-trend').innerHTML='';
+        return;
+      }
+
+      const prevScore=hist[1]?.score||null;
+      const allScores=hist.map(h=>h.score);
+      const avgScore=Math.round(allScores.reduce((a,b)=>a+b,0)/allScores.length);
+      const maxScore=Math.max(...allScores);
+      const minScore=Math.min(...allScores);
+
+      let trendHTML='<div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:10px;font-size:12px;">';
+      if(prevScore!==null){
+        const diff=currentScore-prevScore;
+        const diffPct=Math.round(diff/prevScore*100);
+        const icon=diff>0?'📈 改善':diff<0?'📉 低下':'→ 変化なし';
+        const color=diff>0?'#059669':diff<0?'#dc2626':'#6b7280';
+        trendHTML+=`<div style="color:${color};font-weight:700;margin-bottom:4px;">${icon} 前回比：${diff>0?'+':''}${diff}点 (${diff>0?'+':''}${diffPct}%)</div>`;
+      }
+      trendHTML+=`<div style="color:#6b7280;font-size:11px;">平均: ${avgScore}点 | 最高: ${maxScore}点 | 最低: ${minScore}点（${allScores.length}回）</div>`;
+      trendHTML+='</div>';
+      document.getElementById('r-trend').innerHTML=trendHTML;
+    }
+
+    // トースト通知表示
+    function showToast(message){
+      const toast=document.createElement('div');
+      toast.textContent=message;
+      toast.style.cssText='position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#374151;color:white;padding:12px 20px;border-radius:8px;font-size:13px;z-index:9999;animation:slideUp .3s ease;';
+      document.body.appendChild(toast);
+      setTimeout(()=>{ toast.remove(); }, 2000);
+    }
+
+    // 比較・シミュレーション機能
+    let simAnswers=null; // シミュレーション用回答
+    let savedPatterns=[]; // 保存されたパターン
+
+    function switchResultTab(tab){
+      const mainContent=document.getElementById('tab-main-content');
+      const compareContent=document.getElementById('tab-compare-content');
+      const btnMain=document.getElementById('tab-main');
+      const btnCompare=document.getElementById('tab-compare');
+
+      if(tab==='main'){
+        mainContent.style.display='block';
+        compareContent.style.display='none';
+        btnMain.style.color='#7C3AED';
+        btnMain.style.borderBottomColor='#7C3AED';
+        btnCompare.style.color='#999';
+        btnCompare.style.borderBottomColor='transparent';
+      } else {
+        mainContent.style.display='none';
+        compareContent.style.display='block';
+        btnMain.style.color='#999';
+        btnMain.style.borderBottomColor='transparent';
+        btnCompare.style.color='#7C3AED';
+        btnCompare.style.borderBottomColor='#7C3AED';
+        initSimulation();
+      }
+    }
+
+    function initSimulation(){
+      if(simAnswers===null){
+        simAnswers=[...ans]; // 現在の回答をコピー
+      }
+      renderSimForm();
+      updateCompareTable();
+    }
+
+    function renderSimForm(){
+      const formHTML=QS.map((q,i)=>`
+        <div style="margin-bottom:12px;">
+          <label style="display:block;font-size:12px;font-weight:600;color:#374151;margin-bottom:4px;">Q${i+1}. ${q.text}</label>
+          <select onchange="simAnswers[${i}]=parseInt(this.value);updateCompareTable()" style="width:100%;padding:8px;border:1px solid #d1d5db;border-radius:6px;font-size:13px;">
+            ${q.opts.map((opt,idx)=>`<option value="${idx}" ${simAnswers[i]===idx?'selected':''}>${opt}</option>`).join('')}
+          </select>
+        </div>
+      `).join('');
+      document.getElementById('sim-form').innerHTML=formHTML;
+    }
+
+    function calcScore(answers){
+      return answers.reduce((s,a)=>s+a,0);
+    }
+
+    function getScoreType(score){
+      if(score<=3) return {type:'good',title:'✨ 良好な姿勢タイプ',color:'#059669'};
+      if(score<=8) return {type:'light',title:'😐 軽度の姿勢崩れタイプ',color:'#d97706'};
+      if(score<=14) return {type:'moderate',title:'⚠️ 猫背・巻き肩タイプ',color:'#ea580c'};
+      return {type:'severe',title:'🔴 姿勢改善が急務なタイプ',color:'#dc2626'};
+    }
+
+    function updateCompareTable(){
+      const currentScore=calcScore(ans);
+      const simScore=calcScore(simAnswers);
+      const currentType=getScoreType(currentScore);
+      const simType=getScoreType(simScore);
+
+      let html=`
+        <table style="width:100%;border-collapse:collapse;font-size:12px;">
+          <tr style="background:#f8fafc;">
+            <th style="padding:10px;border:1px solid #e2e8f0;text-align:left;font-weight:600;">項目</th>
+            <th style="padding:10px;border:1px solid #e2e8f0;text-align:center;font-weight:600;">現在の診断</th>
+            <th style="padding:10px;border:1px solid #e2e8f0;text-align:center;font-weight:600;">シミュレーション</th>
+          </tr>
+          <tr>
+            <td style="padding:10px;border:1px solid #e2e8f0;font-weight:600;">姿勢スコア</td>
+            <td style="padding:10px;border:1px solid #e2e8f0;text-align:center;"><strong>${currentScore}</strong>/18</td>
+            <td style="padding:10px;border:1px solid #e2e8f0;text-align:center;"><strong style="color:#4f46e5;">${simScore}</strong>/18</td>
+          </tr>
+          <tr style="background:#f8fafc;">
+            <td style="padding:10px;border:1px solid #e2e8f0;font-weight:600;">診断タイプ</td>
+            <td style="padding:10px;border:1px solid #e2e8f0;text-align:center;"><span style="color:${currentType.color};">${currentType.title}</span></td>
+            <td style="padding:10px;border:1px solid #e2e8f0;text-align:center;"><span style="color:${simType.color};">${simType.title}</span></td>
+          </tr>
+          <tr>
+            <td style="padding:10px;border:1px solid #e2e8f0;font-weight:600;">スコア改善度</td>
+            <td style="padding:10px;border:1px solid #e2e8f0;text-align:center;">基準</td>
+            <td style="padding:10px;border:1px solid #e2e8f0;text-align:center;"><span style="color:${simScore<currentScore?'#10b981':simScore>currentScore?'#ef4444':'#6b7280'};font-weight:700;">${simScore<currentScore?'📈 改善':simScore>currentScore?'📉 悪化':'→ 同じ'}</span> (${simScore-currentScore>0?'+':''}${simScore-currentScore})</td>
+          </tr>
+        </table>
+      `;
+      document.getElementById('compare-table').innerHTML=html;
+    }
+
+    function clearSimulation(){
+      simAnswers=[...ans];
+      renderSimForm();
+      updateCompareTable();
+      showToast('🔄 シミュレーションをリセットしました');
+    }
+
+    function saveSimResult(){
+      if(simAnswers===null) return;
+      const score=calcScore(simAnswers);
+      const type=getScoreType(score);
+      savedPatterns.push({
+        name:`パターン ${savedPatterns.length+1}`,
+        answers:[...simAnswers],
+        score,
+        type:type.type,
+        timestamp:new Date().toLocaleString('ja-JP')
+      });
+      showToast(`✅ パターンを保存しました（${score}点）`);
+    }
+    </script>
+    <!-- r31-use-cases -->
+<div style="margin:1.5rem auto;max-width:760px;padding:0 1rem">
+<h2 style="font-size:1.125rem;font-weight:700;margin:0 0 1rem;color:#1e293b;border-left:4px solid #4f46e5;padding-left:10px">こんな方・シーンで役立ちます</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.75rem">
+<div style="padding:1rem;background:#f8fafc;border:1px solid #e2e8f0;border-radius:.75rem">
+<div style="font-size:1.5rem;margin-bottom:.4rem">💪</div>
+<div style="font-weight:700;font-size:.9rem;color:#1e293b;margin-bottom:.4rem">健康管理・記録を始めたい方</div>
+<div style="font-size:.85rem;color:#64748b;line-height:1.7">体重・血圧・睡眠時間など日々のバイタルを記録して変化を把握したい方に。グラフで可視化することで生活改善のきっかけが見つかります。</div>
+</div>
+<div style="padding:1rem;background:#f8fafc;border:1px solid #e2e8f0;border-radius:.75rem">
+<div style="font-size:1.5rem;margin-bottom:.4rem">🏃</div>
+<div style="font-weight:700;font-size:.9rem;color:#1e293b;margin-bottom:.4rem">ダイエット・運動習慣をつけたい方</div>
+<div style="font-size:.85rem;color:#64748b;line-height:1.7">目標体重・消費カロリー・必要な運動量を計算して、無理なく継続できる計画を立てたい方に。科学的根拠に基づいた数値で効率よくダイエットできます。</div>
+</div>
+<div style="padding:1rem;background:#f8fafc;border:1px solid #e2e8f0;border-radius:.75rem">
+<div style="font-size:1.5rem;margin-bottom:.4rem">👩‍⚕️</div>
+<div style="font-weight:700;font-size:.9rem;color:#1e293b;margin-bottom:.4rem">生活習慣病が気になる方</div>
+<div style="font-size:.85rem;color:#64748b;line-height:1.7">医師から生活改善のアドバイスを受けて、自己管理の指標として活用したい方に。血圧・血糖値・BMIの適正範囲を確認できます。</div>
+</div>
+<div style="padding:1rem;background:#f8fafc;border:1px solid #e2e8f0;border-radius:.75rem">
+<div style="font-size:1.5rem;margin-bottom:.4rem">👴</div>
+<div style="font-weight:700;font-size:.9rem;color:#1e293b;margin-bottom:.4rem">シニア・中高年の健康維持</div>
+<div style="font-size:.85rem;color:#64748b;line-height:1.7">年齢に合った適切な運動量・栄養摂取量の目安を知って、元気に過ごしたい中高年の方に。体力の変化に合わせた健康管理ができます。</div>
+</div>
+</div>
+</div>
+<!-- r31-extended-faq -->
+<div style="margin:1.5rem auto;max-width:760px;padding:0 1rem">
+<div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 4px 20px rgba(0,0,0,.08)">
+<h2 style="font-size:1.05rem;font-weight:700;margin:0 0 1rem;border-left:4px solid #4f46e5;padding-left:10px;color:#1e293b">よくある質問（詳細）</h2>
+<div style="margin-top:12px;display:flex;flex-direction:column;gap:12px">
+<div style="border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px"><p style="font-weight:600;color:#1e293b;margin:0 0 6px">Q. 姿勢矯正グッズ（サポーター・クッション等）は効果がありますか？</p><p style="font-size:.875rem;color:#475569;line-height:1.8;margin:0">姿勢矯正グッズの効果は使い方によって異なります。姿勢サポーターは「正しい姿勢を保つサポートにはなる」ものの「着けている間だけ効果・外すと元の姿勢に戻る」傾向があり、筋力強化と併用することが重要です。バランスクッション（座面用の空気クッション）は体幹を使う意識付けに有効ですが、長時間使うと疲れる場合があります。スタンディングデスクは「長時間同じ姿勢を防ぐ」点で有効で、座位・立位を切り替えながら使うのが理想です。グッズよりも「ストレッチと筋力トレーニング」の方が根本的な改善につながります。</p></div>
+<div style="border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px"><p style="font-weight:600;color:#1e293b;margin:0 0 6px">Q. 仕事中に姿勢を崩さないための習慣作りのコツは？</p><p style="font-size:.875rem;color:#475569;line-height:1.8;margin:0">仕事中の姿勢維持のための習慣化のコツとして「タイマーで1時間ごとに休憩リマインド（簡単なストレッチ実施）」「モニターアーム・ノートPCスタンドで画面の高さを最適化」「足元にフットレストを置いて正しい膝の角度を確保」「深呼吸のタイミングで姿勢をリセットする習慣」があります。姿勢改善は意識するだけでは習慣になりにくいため「環境を整える（デスク・椅子・モニターの高さ）」ことが最も確実です。本ツールで定期的に姿勢スコアをチェックし、改善を数値で把握してください。</p></div>
+</div>
+</div>
+</div>
+<!-- r31-tool-notice -->
+<div style="margin:1.5rem auto;max-width:760px;padding:0 1rem">
+<div style="padding:1.25rem 1.5rem;background:#fef3c7;border:1px solid #fbbf24;border-radius:.75rem">
+<h3 style="font-size:1rem;font-weight:700;margin:0 0 .75rem;color:#92400e">⚠️ ご利用時の注意事項</h3>
+<ul style="margin:0;padding-left:1.25rem;font-size:.88rem;color:#78350f;line-height:2">
+<li style='margin-bottom:.4rem'>本ツールの結果はあくまで参考情報です。医療的な診断・治療の代替にはなりません</li>
+<li style='margin-bottom:.4rem'>体調不良・症状が気になる場合は必ず医療機関（内科・専門科）を受診してください</li>
+<li style='margin-bottom:.4rem'>計算値（BMI・カロリー等）は個人差があるため、実際の状況とは異なる場合があります</li>
+<li style='margin-bottom:.4rem'>妊娠中・授乳中の方や持病がある方は、新しい健康法を始める前に必ず医師にご相談ください</li>
+<li style='margin-bottom:.4rem'>医薬品・サプリメントの使用については必ず医師・薬剤師の指示に従ってください</li>
+</ul>
+</div>
+</div>
+<!-- r31-tool-references -->
+<div style="margin:1.5rem auto;max-width:760px;padding:0 1rem">
+<div style="padding:1.25rem 1.5rem;background:#f8fafc;border:1px solid #e2e8f0;border-radius:.75rem">
+<h3 style="font-size:1rem;font-weight:700;margin:0 0 .75rem;color:#1e293b">📚 関連する公的情報・参考リンク</h3>
+<ul style="margin:0;padding-left:1.25rem;font-size:.88rem;color:#374151;line-height:1.9">
+<li style='margin-bottom:.5rem'><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/eiyou/" target="_blank" rel="noopener noreferrer" style="color:#4f46e5">厚生労働省 日本人の食事摂取基準</a> — 年齢・性別・活動量に応じた栄養摂取量の公的基準</li>
+<li style='margin-bottom:.5rem'><a href="https://www.nibiohn.go.jp/eiken/kenkounippon21/" target="_blank" rel="noopener noreferrer" style="color:#4f46e5">健康日本21（第三次）</a> — 国民の健康増進・生活習慣病予防の指針</li>
+<li style='margin-bottom:.5rem'><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/sports/index.html" target="_blank" rel="noopener noreferrer" style="color:#4f46e5">厚生労働省 身体活動・運動</a> — 健康を維持するための適切な運動量の目安</li>
+<li style='margin-bottom:.5rem'><a href="https://www.jma.or.jp/" target="_blank" rel="noopener noreferrer" style="color:#4f46e5">日本医師会 健康情報</a> — 医療・健康に関する正確な情報提供</li>
+</ul>
+</div>
+</div>
+<!-- r31-tool-about -->
+<div style="margin:1.5rem auto;max-width:760px;padding:0 1rem">
+<div style="padding:1.25rem 1.5rem;background:#f0f9ff;border:1px solid #bae6fd;border-radius:.75rem">
+<h3 style="font-size:1rem;font-weight:700;margin:0 0 .75rem;color:#0c4a6e">ℹ️ このツールについて</h3>
+<p style="margin:0;font-size:.88rem;color:#0c4a6e;line-height:1.9">「姿勢チェッカー」はAppADayCreatorが提供する無料Webツールです。健康・医療に関する情報を素早く手軽に確認できます。会員登録・アプリインストール不要で、ブラウザからすぐにご利用いただけます。すべての処理はブラウザ内で完結するため、入力した情報が外部サーバーに送信されることはなく、プライバシーも保護されます。AppADayCreatorでは、日常生活のあらゆるシーンで役立つWebツールを400本以上無料で提供しています。金融・健康・育児・キャリア・旅行など幅広いカテゴリのツールをご活用ください。</p>
+</div>
+</div>
+<!-- r31-extra-guide -->
+<div style="margin:1.5rem auto;max-width:760px;padding:0 1rem">
+<div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 4px 20px rgba(0,0,0,.06)">
+<h3 style="font-size:.95rem;font-weight:700;margin:1.25rem 0 .6rem;color:#1e293b">関連ツールのご紹介</h3>
+
+</div>
+</div>
 
 <div style="border-top:1px solid #e5e7eb;padding:14px 16px 18px;background:#fff;">
   <p style="text-align:center;font-size:11px;font-weight:600;color:#94a3b8;margin:0 0 10px;">スポンサーリンク</p>
   <div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;max-width:700px;margin:0 auto;">
     <a href="https://px.a8.net/svt/ejp?a8mat=4B3WJ7+18PTPM+1O96+699KI" rel="nofollow noopener noreferrer" target="_blank" style="display:inline-block;padding:5px 12px;background:#fff;border:1px solid #d1d5db;border-radius:20px;font-size:12px;color:#4b5563;text-decoration:none;white-space:nowrap;">《ヨガ》をはじめてみませんか？ホットヨガスタジオLAVA</a><img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3WJ7+18PTPM+1O96+699KI" alt="">
-    <a href="https://px.a8.net/svt/ejp?a8mat=4B3WJ6+FQ9JMY+1LP8+BY642" rel="nofollow noopener noreferrer" target="_blank" style="display:inline-block;padding:5px 12px;background:#fff;border:1px solid #d1d5db;border-radius:20px;font-size:12px;color:#4b5563;text-decoration:none;white-space:nowrap;">日々の生活にハッピーをプラス！《ハピタス》</a><img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B3WJ6+FQ9JMY+1LP8+BY642" alt="">
+    <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR6+GFV6NE+3CJQ+64C3M" rel="nofollow noopener noreferrer" target="_blank" style="display:inline-block;padding:5px 12px;background:#fff;border:1px solid #d1d5db;border-radius:20px;font-size:12px;color:#4b5563;text-decoration:none;white-space:nowrap;">本・雑誌・ビジネス書が聴ける【audiobook.jp】</a><img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B3VR6+GFV6NE+3CJQ+64C3M" alt="">
   </div>
 </div>
 <footer style="text-align:center;padding:20px;color:white;font-size:12px;background:#374151;margin-top:8px;">
@@ -383,6 +864,40 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
         | <a href="contact.html" style="color:white;">お問い合わせ</a></p>
         <p style="margin-top:4px;font-size:11px;opacity:0.6;">最終更新: 2026年5月 | 本サービスはアフィリエイト広告を掲載しています（A8.net/Amazon）</p>
         <p style="margin-top:6px;">© 2026 AppADayCreator. All services are free.</p>
-    </footer>
+    <div style="background:linear-gradient(135deg,#1e3a5f,#2563eb);padding:16px 12px;text-align:center;margin-top:12px;">
+  <p style="color:#e0e7ff;font-size:12px;font-weight:600;margin:0 0 4px;">運営：AppADayCreator / Tech&amp;Brace</p>
+  <p style="color:#cbd5e1;font-size:11px;margin:0 0 10px;">マネー・健康・育児・キャリアなど日常に役立つ無料Webサービスを提供。IT・業務効率化のご相談はこちら。</p>
+  <a href="https://tech-and-brace.com/ai-automation?utm_source=appadaycreator&utm_medium=footer&utm_campaign=b2b_cta" target="_blank" rel="noopener" onclick="if(typeof gtag==='function'){gtag('event','b2b_cta_click',{source_page:window.location.pathname,cta_position:'footer',tool_category:document.querySelector('[aria-label=\"パンくずリスト\"] li:nth-child(3) a')?document.querySelector('[aria-label=\"パンくずリスト\"] li:nth-child(3) a').innerText:'general',destination:'https://tech-and-brace.com/ai-automation'})}" style="display:inline-block;background:#fff;color:#1e3a5f;font-size:11px;font-weight:700;padding:6px 16px;border-radius:20px;text-decoration:none;">法人・B2B相談はこちら →</a>
+</div>
+</footer>
+<div style="text-align:center;padding:10px 16px 14px;background:#eef2ff;border-top:2px solid #c7d2fe;margin-top:8px">
+<a href="/blog/" style="color:#4f46e5;font-size:.85rem;font-weight:700">📖 マネー・育児・キャリアのコラムを読む →</a>
+</div>
+<div style="background:#eef2ff;border-left:4px solid #4f46e5;border-radius:.5rem;padding:1rem 1.25rem;margin:1.5rem auto;max-width:760px;font-size:.875rem">
+<p style="margin:0 0 .5rem;font-weight:700;color:#3730a3">📖 お役立ちコラム</p>
+<ul style="margin:0;padding-left:1.25rem;color:#4f46e5;line-height:2">
+<li><a href="/blog/stock-investment-beginner/" style="color:#4f46e5">株式投資の始め方【初心者完全ガイド】</a></li>
+<li><a href="/blog/nisa-comparison/" style="color:#4f46e5">新NISA vs iDeCo 徹底比較</a></li>
+<li><a href="/blog/investment-risk-management/" style="color:#4f46e5">投資のリスク管理入門</a></li>
+</ul>
+</div>
+<!-- r17-mobile-ux -->
+<a href="#top" id="back-to-top" aria-label="ページトップへ戻る" style="display:none;position:fixed;bottom:24px;right:20px;background:#4f46e5;color:#fff;border:none;border-radius:50%;width:48px;height:48px;font-size:1.4rem;line-height:48px;text-align:center;text-decoration:none;box-shadow:0 4px 12px rgba(79,70,229,.4);z-index:9000;cursor:pointer" title="ページトップへ">↑</a>
+<script>
+(function(){
+  var btn = document.getElementById('back-to-top');
+  if(!btn) return;
+  window.addEventListener('scroll', function(){
+    btn.style.display = window.scrollY > 400 ? 'block' : 'none';
+  }, {passive:true});
+})();
+</script>
+<!-- r31-cookie-banner -->
+<div id="cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;z-index:9999;font-size:.85rem;box-shadow:0 -2px 10px rgba(0,0,0,.3)">
+<div>当サイトはCookieおよびGoogle Analyticsを使用しています。<a href="/privacy-policy.html" style="color:#60a5fa;text-decoration:underline">プライバシーポリシー</a>をご確認ください。</div>
+<button onclick="document.getElementById('cookie-banner').style.display='none';window.grantConsent && window.grantConsent()" style="background:#3b82f6;color:#fff;border:none;padding:.5rem 1.25rem;border-radius:.375rem;font-size:.85rem;font-weight:600;cursor:pointer;white-space:nowrap">同意して閉じる</button>
+</div>
+<script>if(localStorage.getItem('cookie-consent'))document.getElementById('cookie-banner').style.display='none'</script>
+<script src="/assets/consent-mode.js"></script>
 </body>
 </html>
